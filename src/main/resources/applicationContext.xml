@@ -4,7 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="message"
-          class="com.sopra.spring.DefaultMessage" />
+    <bean id="message" class="com.sopra.spring.ConstructorMessage" >
+    <constructor-arg value="Spring is "></constructor-arg>
+    <constructor-arg value="not fun!!!"></constructor-arg>
+    </bean>
 
 </beans>

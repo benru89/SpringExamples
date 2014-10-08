@@ -7,7 +7,7 @@ public class App {
 
 	public static void main(String args[]){
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml"); 
-		DefaultMessage message=context.getBean("message",DefaultMessage.class);
+		ConstructorMessage message=context.getBean("message",ConstructorMessage.class);
 		System.out.println(message.getMessage());
 		context.close();
 	}

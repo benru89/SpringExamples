@@ -1,7 +1,11 @@
 package com.sopra.spring;
 
-public class DefaultMessage {
-	private String message = "Spring is fun!!!";
+public class ConstructorMessage {
+	private String message = "Spring !!!";
+	
+	public ConstructorMessage(String message1,String message2){
+		this.message= message1.concat(message2);
+	}
 	
 	/** Gets message */
 	public String getMessage(){
