@@ -1,7 +1,7 @@
 package com.sopra.spring;
 
 
-import org.apache.log4j.Logger;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -15,11 +15,14 @@ public class HelloWorldConfig {
 	public HelloWorld helloWorld() {
 		return new HelloWorldImpl();
 	}
-
-	@Bean
-	public Logger log()
-	{
-		return Logger.getLogger(App.class);
+	@Bean(initMethod = "init", destroyMethod = "cleanup")
+	//@Scope("prototype")
+	@Scope("singleton")
+	public Messagei18n messagei18n() {
+		return new Messagei18nImpl();
 	}
+
+	
+	
 	
 }

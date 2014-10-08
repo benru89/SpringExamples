@@ -4,8 +4,6 @@ public interface HelloWorld {
 	
 	public String sayHello();
 	
-	public String saySomethingElse(String something);
-
-	public String getMessage();
+	public String sayWelcome(Object[] args);
 
 }

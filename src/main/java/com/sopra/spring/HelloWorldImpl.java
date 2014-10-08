@@ -1,34 +1,30 @@
 package com.sopra.spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class HelloWorldImpl implements HelloWorld{
 
-	private String message;
+	@Autowired
+	private Messagei18n resource;
 	
 	public void init(){
-		this.setMessage("hallo!!!");
+
 	}
 	
 	public void cleanup(){
-		this.setMessage(null);
+
 	}
 	
 	@Override
 	public String sayHello() {
-		return message;
+		return resource.getMessage(Messagei18n.MAIN_GUI_HELLOWORLD);
 	}
 
 	@Override
-	public String saySomethingElse(String something) {
-		this.setMessage(something);
-		return message;
+	public String sayWelcome(Object[] args) {
+		return resource.getMessage(Messagei18n.MAIN_GUI_WELLCOMEMESSAGE,args);
 	}
 
-	public String getMessage() {
-		return message;
-	}
 
-	public void setMessage(String message) {
-		this.message = message;
-	}
 
 }
