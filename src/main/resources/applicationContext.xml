@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="springMessage" class="java.lang.String">
-	<constructor-arg value="Exercise 4!!!"></constructor-arg>
+    	<bean id="springMessage" class="java.lang.String">
+	<constructor-arg value="Hola que taaaal!!!"></constructor-arg>
 	</bean>
 
     <bean id="message" class="com.sopra.spring.SetterMessage" >
